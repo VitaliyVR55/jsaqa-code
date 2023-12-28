@@ -6,10 +6,10 @@
   "scripts": {
     "test": "playwright"
   },
-  "author": "",
+  "author": "Rogov",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.12.3",
-    "playwright": "^1.12.3"
+    "@playwright/test": "^1.40.1",
+    "playwright": "^1.40.0"
   }
 }
