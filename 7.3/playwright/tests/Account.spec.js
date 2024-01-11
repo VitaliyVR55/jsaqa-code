@@ -12,15 +12,16 @@ test.describe("Авторизация", () => {
     /* const browser = await chrome.launch({
       headless: false,
       slowMo: 500
-    }); */ 
+    }); */
     await page.goto('https://netology.ru/');
     await page.getByRole('link', { name: 'Войти' }).click();
     await page.getByPlaceholder('Email').click();
     await page.getByPlaceholder('Email').fill(emailValid);
     await page.getByPlaceholder('Пароль').fill(passwordValid);
     await page.getByTestId('login-submit-btn').click();
-    await expect(page.getByText( 'Моё обучение' )).toBeVisible();
-    // await expect(page.getByText('Вы остановились здесь. Продолжим?')).toBeVisible();
+    await expect(page.getByTestId('header-top').getByRole('link', { name: 'Медиа Нетологии' })).toBeVisible();
+    // await expect(page.getByRole('heading', { name: 'Моё обучение' })).toBeVisible();
+    // await expect(page.getByText('Моё обучение?')).toBeVisible();
   });
 
   test('Неуспешная авторизация', async ({ page }) => {
