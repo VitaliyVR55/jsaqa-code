@@ -3,9 +3,10 @@ const {
     emailValid,
     passwordValid,
     emailInvalid,
-    passwordInvalid
-  
+    passwordInvalid  
 } = require("../user.js");
+
+// const { invalidEmail, invalidPassword } = require("../notAuthorizedUser");  // с файлом notAuthorizedUzer.js
 
 test.describe("Авторизация", () => {
   test('Успешная авторизация', async ({ page }) => {
